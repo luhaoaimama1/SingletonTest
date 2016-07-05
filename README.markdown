@@ -16,4 +16,5 @@
 # Reference&Thanks：
 
 https://github.com/zzz40500/GsonFormat
+
 http://cantellow.iteye.com/blog/838473
