@@ -36,7 +36,7 @@ public enum GenerateType {
         }
         if(result==null||result.isEmpty())
             return null;
-        return result.getBytes();
+        return (getPackageJoint(packageString)+result).getBytes();
     };
     private String getPackageJoint(String packageName){
         if(packageName==null||packageName.trim().length()==0)
@@ -46,7 +46,7 @@ public enum GenerateType {
     };
 
     private String lazyUnSafe(String packageName,String className) {
-            return getPackageJoint(packageName)+
+            return 
                     "public class "+className+" {\n" +
                     "    private static "+className+" instance;\n" +
                     "\n" +
@@ -62,7 +62,7 @@ public enum GenerateType {
                     "}";
     }
     private String lazySafe(String packageName,String className){
-        return getPackageJoint(packageName)+
+        return 
                 "public class "+className+" {\n" +
                 "    private static "+className+" instance;\n" +
                 "\n" +
@@ -78,7 +78,7 @@ public enum GenerateType {
                 "}";
     }
     private String staticInner(String packageName,String className){
-        return getPackageJoint(packageName)+
+        return 
                 "public class "+className+" {\n" +
                 "\n" +
                 "    private "+className+"() {\n" +
@@ -94,7 +94,7 @@ public enum GenerateType {
                 "}";
     }
     private String hungry(String packageName,String className){
-        return getPackageJoint(packageName)+
+        return 
                 "public class "+className+" {\n" +
                 "    private static "+className+" instance = new "+className+"();\n" +
                 "\n" +
@@ -107,13 +107,13 @@ public enum GenerateType {
                 "}";
     }
     private String enumString(String packageName,String className){
-        return getPackageJoint(packageName)+
+        return 
                 "public enum "+className+" {\n" +
                 "    INSTANCE;\n" +
                 "}";
     }
     private String doubleCheck(String packageName,String className){
-        return getPackageJoint(packageName)+
+        return 
                 "public class "+className+" {\n" +
                 "\n" +
                 "    private static volatile "+className+" singleton;\n" +
