@@ -1,17 +1,15 @@
 <idea-plugin version="2">
-    <id>com.zone.unique.plugin.id</id>
+    <id>com.zone.unique.plugin.singleton</id>
     <name>SingletonTest</name>
     <version>1.0</version>
     <vendor email="1149324777@qq.com" url="">YourCompany</vendor>
 
     <description><![CDATA[
     generate singleton  template.<br>
-      <em> fast generate six type singleton  </em>
     ]]></description>
 
     <change-notes><![CDATA[
       Add change notes here.<br>
-      <em>most HTML tags may be used</em>
     ]]>
     </change-notes>
 
