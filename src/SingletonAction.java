@@ -92,6 +92,7 @@ public class SingletonAction extends AnAction {
 
     }
     public void checkSourceFolder(VirtualFile[] sourceFiles,VirtualFile operationFile){
+        isSourceFolder=false;
         for (VirtualFile sourceFile : sourceFiles) {
             if(operationFile.getPath().contains(sourceFile.getPath())) {
                 isSourceFolder =operationFile.isDirectory();
