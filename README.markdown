@@ -9,7 +9,9 @@
    
 #安装预设
 
-打开studio预设 选择从磁盘安装 然后选择 本项目下的SingletonTest.jar即可;
+1.Android studio  
+ File->Settings..->Plugins-->Browse repositores..搜索SingletonTest
+2.安装插件,重启android studio
 
 #使用截图
 
