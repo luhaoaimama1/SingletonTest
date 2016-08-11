@@ -83,12 +83,16 @@ public class SingletonAction extends AnAction {
 
         //Set visibility only in case of existing project and editor
         VirtualFile operationFile = e.getData(PlatformDataKeys.VIRTUAL_FILE);
-        VirtualFile[] vFiles = ProjectRootManager.getInstance(e.getProject()).getContentSourceRoots();
-        checkSourceFolder(vFiles,operationFile);
+
+        if (operationFile!=null) {
+            VirtualFile[] vFiles = ProjectRootManager.getInstance(e.getProject()).getContentSourceRoots();
+            checkSourceFolder(vFiles,operationFile);
 //        e.getPresentation().setEnabled(editor != null);
-        if (isSourceFolder)
-            e.getPresentation().setIcon(IconLoader.getIcon("res/icon.jpg"));
-        e.getPresentation().setVisible(isSourceFolder);//该action 的可见性
+            if (isSourceFolder)
+                e.getPresentation().setIcon(IconLoader.getIcon("res/icon.jpg"));
+            e.getPresentation().setVisible(isSourceFolder);//该action 的可见性
+        }else
+            e.getPresentation().setVisible(false);//
 
     }
     public void checkSourceFolder(VirtualFile[] sourceFiles,VirtualFile operationFile){
