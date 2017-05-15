@@ -1,3 +1,5 @@
+package templete;
+
 /**
  * Created by fuzhipeng on 16/7/5.
  */

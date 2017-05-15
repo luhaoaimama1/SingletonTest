@@ -1,4 +1,5 @@
-import com.intellij.icons.AllIcons;
+package templete;
+
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.command.CommandProcessor;
@@ -8,8 +9,6 @@ import com.intellij.openapi.util.IconLoader;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.openapi.vfs.VirtualFileManager;
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * Created by fuzhipeng on 16/7/5.
@@ -33,11 +32,16 @@ public class SingletonAction extends AnAction {
         folder=e.getData(PlatformDataKeys.VIRTUAL_FILE);
         project=e.getProject();
 
-        ShowDialog sd=new ShowDialog();
-        sd.setSize(400, 150);
-        sd.setLocationRelativeTo(null);
-        sd.addCallback(callback);
-        sd.setVisible(true);
+
+        try {
+            ShowDialog sd=new ShowDialog();
+            sd.setSize(400, 150);
+            sd.setLocationRelativeTo(null);
+            sd.addCallback(callback);
+            sd.setVisible(true);
+        } catch (Exception e1) {
+            e1.printStackTrace();
+        }
 
     }
     private ShowDialog.Callback callback=new ShowDialog.Callback() {
@@ -89,7 +93,7 @@ public class SingletonAction extends AnAction {
             checkSourceFolder(vFiles,operationFile);
 //        e.getPresentation().setEnabled(editor != null);
             if (isSourceFolder)
-                e.getPresentation().setIcon(IconLoader.getIcon("res/icon.jpg"));
+                e.getPresentation().setIcon(IconLoader.getIcon("../res/icon.jpg"));
             e.getPresentation().setVisible(isSourceFolder);//该action 的可见性
         }else
             e.getPresentation().setVisible(false);//

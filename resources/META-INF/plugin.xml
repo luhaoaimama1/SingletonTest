@@ -1,7 +1,10 @@
 <idea-plugin version="2">
     <id>com.zone.unique.plugin.singleton</id>
     <name>SingletonTest</name>
-    <version>1.0</version>
+    <version>1.1</version>
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <!--<idea-version since-build="141.0"/>-->
+    <idea-version since-build="107.121"/>
     <vendor email="1149324777@qq.com" url="">YourCompany</vendor>
 
     <description><![CDATA[
@@ -9,12 +12,11 @@
     ]]></description>
 
     <change-notes><![CDATA[
-      Add change notes here.<br>
+      support 2.3 2.4 version<br>
     ]]>
     </change-notes>
 
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="141.0"/>
+
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
@@ -22,13 +24,14 @@
     <depends>com.intellij.modules.lang</depends>
     -->
 
+
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
     </extensions>
 
     <actions>
         <!-- Add your actions here -->
-        <action id="SingletonTest.SingletonAction" class="SingletonAction" text="SingletonGenerate"
+        <action id="SingletonTest.templete.SingletonAction" class="templete.SingletonAction" text="SingletonGenerate"
                 description="generate singleton  template ">
             <add-to-group group-id="NewGroup" anchor="after" relative-to-action="NewFile"/>
         </action>

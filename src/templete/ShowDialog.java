@@ -1,3 +1,5 @@
+package templete;
+
 import javax.swing.*;
 import java.awt.event.*;
 
@@ -48,7 +50,7 @@ public class ShowDialog extends JDialog {
 
     private void onOK() {
 // add your code here
-        callback.showDialogResult(textField1.getText().toString(),GenerateType.valueOf((String)comboBox1.getSelectedItem()));
+        callback.showDialogResult(textField1.getText().toString(), GenerateType.valueOf((String)comboBox1.getSelectedItem()));
         dispose();
     }
 
