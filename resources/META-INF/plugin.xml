@@ -5,15 +5,16 @@
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
     <!--<idea-version since-build="141.0"/>-->
     <idea-version since-build="107.121"/>
-    <vendor email="1149324777@qq.com" url="">YourCompany</vendor>
+    <vendor email="1149324777@qq.com" >zone</vendor>
 
     <description><![CDATA[
-    generate singleton  template.<br>
+    generate singleton  template.<br/>
     ]]></description>
 
     <change-notes><![CDATA[
-      support 2.3 2.4 version<br>
-      fix EmptyThrowable: Icon cannot be found in '../res/icon.jpg'<br>
+      support 2.3 2.4 version<br/>
+
+      fix EmptyThrowable: Icon cannot be found in '../res/icon.jpg' <br/>
     ]]>
     </change-notes>
 
