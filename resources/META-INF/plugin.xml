@@ -1,7 +1,7 @@
 <idea-plugin version="2">
     <id>com.zone.unique.plugin.singleton</id>
     <name>SingletonTest</name>
-    <version>1.1</version>
+    <version>1.2</version>
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
     <!--<idea-version since-build="141.0"/>-->
     <idea-version since-build="107.121"/>
@@ -13,6 +13,7 @@
 
     <change-notes><![CDATA[
       support 2.3 2.4 version<br>
+      fix EmptyThrowable: Icon cannot be found in '../res/icon.jpg'<br>
     ]]>
     </change-notes>
 

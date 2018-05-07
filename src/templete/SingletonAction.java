@@ -93,7 +93,13 @@ public class SingletonAction extends AnAction {
             checkSourceFolder(vFiles,operationFile);
 //        e.getPresentation().setEnabled(editor != null);
             if (isSourceFolder)
-                e.getPresentation().setIcon(IconLoader.getIcon("../res/icon.jpg"));
+                e.getPresentation().setIcon(IconLoader.getIcon("/res/icon.jpg"));
+//                try {
+//                    e.getPresentation().setIcon(IconLoader.getIcon("../res/icon.jpg"));
+//                } catch (Exception e1) {
+//
+////                e1.printStackTrace();
+//                }
             e.getPresentation().setVisible(isSourceFolder);//该action 的可见性
         }else
             e.getPresentation().setVisible(false);//
